@@ -3,7 +3,7 @@ const shortid = require('shortid');
 const server = express();
 
 server.use(express.json());
-
+ 
 let users = [];
 
 server.post('/api/users', (req, res) => {
@@ -43,7 +43,6 @@ server.get('/api/users/:id', (req, res) => {
         res.status(500).json({ errorMessage: 'The user information could not be retrieved.' });
       }
     });
-
 
 server.delete('/api/users/:id', (req, res) => {
     const id = req.params.id;
